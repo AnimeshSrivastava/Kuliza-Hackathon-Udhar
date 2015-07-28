@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/egg_shell"
+    tools:context="com.example.aakhri.MainActivity$PlaceholderFragment" >
+    <EditText
+        android:id="@+id/deditview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Description" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/amounteditview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/camerabutton"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Rs." />
+
+    <EditText
+        android:id="@+id/peopleeditview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/amounteditview"
+        android:layout_below="@+id/amounteditview"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:text="People involved" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/amounteditview"
+        android:layout_alignLeft="@+id/amounteditview" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextpeople"
+            android:layout_below="@+id/editTextpeople"
+            android:layout_marginTop="31dp"
+            android:text="Payed by You" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payed by Others" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/peopleeditview"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        android:background="@color/aero_blue"
+        android:onClick="adddata"
+        android:text="Save" />
+
+    <EditText
+        android:id="@+id/dateeditview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/peopleeditview"
+        android:layout_marginTop="18dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Enter date" />
+
+    <Button
+        android:id="@+id/camerabtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignLeft="@+id/radioGroup"
+       
+        android:background="@drawable/ic_local_see_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/radioGroup"
+        android:layout_alignRight="@+id/deditview"
+        android:layout_alignTop="@+id/camerabtn"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:src="@drawable/abc_ab_bottom_solid_light_holo" />
+
+    <Button
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignRight="@+id/dateeditview"
+        android:background="@color/aero_blue"
+        android:onClick="showdata"
+        android:text="Show All Entries" />
+
+</RelativeLayout>
